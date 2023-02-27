@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace _DairyFarmSystem
 {
-    public partial class CowHealth : Form
+    public partial class MilkSales : Form
     {
-        public CowHealth()
+        public MilkSales()
         {
             InitializeComponent();
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
