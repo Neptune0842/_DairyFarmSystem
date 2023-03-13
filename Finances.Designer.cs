@@ -82,6 +82,8 @@
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.guna2DateTimePicker3 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2GradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -196,6 +198,7 @@
             // 
             // panel6
             // 
+            this.panel6.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panel6.Controls.Add(this.pictureBox5);
             this.panel6.Controls.Add(this.label15);
             this.panel6.Location = new System.Drawing.Point(5, 521);
@@ -256,7 +259,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel4.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Location = new System.Drawing.Point(2, 379);
@@ -430,9 +433,9 @@
             this.label8.ForeColor = System.Drawing.Color.DimGray;
             this.label8.Location = new System.Drawing.Point(15, 189);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(85, 34);
+            this.label8.Size = new System.Drawing.Size(114, 34);
             this.label8.TabIndex = 108;
-            this.label8.Text = "Event";
+            this.label8.Text = "Amount";
             // 
             // bunifuMaterialTextbox4
             // 
@@ -527,7 +530,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(419, 48);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(469, 48);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.Size = new System.Drawing.Size(544, 277);
@@ -556,6 +559,8 @@
             // 
             // panel10
             // 
+            this.panel10.Controls.Add(this.guna2DateTimePicker3);
+            this.panel10.Controls.Add(this.label13);
             this.panel10.Controls.Add(this.guna2DataGridView2);
             this.panel10.Controls.Add(this.button1);
             this.panel10.Controls.Add(this.label2);
@@ -593,7 +598,7 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle6;
             this.guna2DataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView2.Location = new System.Drawing.Point(419, 48);
+            this.guna2DataGridView2.Location = new System.Drawing.Point(469, 48);
             this.guna2DataGridView2.Name = "guna2DataGridView2";
             this.guna2DataGridView2.RowHeadersVisible = false;
             this.guna2DataGridView2.Size = new System.Drawing.Size(544, 277);
@@ -676,9 +681,9 @@
             this.label4.ForeColor = System.Drawing.Color.DimGray;
             this.label4.Location = new System.Drawing.Point(15, 189);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 34);
+            this.label4.Size = new System.Drawing.Size(114, 34);
             this.label4.TabIndex = 108;
-            this.label4.Text = "Event";
+            this.label4.Text = "Amount";
             // 
             // bunifuMaterialTextbox1
             // 
@@ -706,9 +711,9 @@
             this.label11.ForeColor = System.Drawing.Color.DimGray;
             this.label11.Location = new System.Drawing.Point(13, 92);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(116, 34);
+            this.label11.Size = new System.Drawing.Size(76, 34);
             this.label11.TabIndex = 104;
-            this.label11.Text = "Purpose";
+            this.label11.Text = "Type";
             // 
             // label12
             // 
@@ -720,6 +725,32 @@
             this.label12.Size = new System.Drawing.Size(156, 32);
             this.label12.TabIndex = 103;
             this.label12.Text = "Income List";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.DimGray;
+            this.label13.Location = new System.Drawing.Point(360, 20);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(73, 28);
+            this.label13.TabIndex = 114;
+            this.label13.Text = "Filter";
+            // 
+            // guna2DateTimePicker3
+            // 
+            this.guna2DateTimePicker3.BackColor = System.Drawing.Color.White;
+            this.guna2DateTimePicker3.Checked = true;
+            this.guna2DateTimePicker3.FillColor = System.Drawing.Color.Empty;
+            this.guna2DateTimePicker3.Font = new System.Drawing.Font("Cambria", 14.25F);
+            this.guna2DateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.guna2DateTimePicker3.Location = new System.Drawing.Point(320, 53);
+            this.guna2DateTimePicker3.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.guna2DateTimePicker3.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.guna2DateTimePicker3.Name = "guna2DateTimePicker3";
+            this.guna2DateTimePicker3.Size = new System.Drawing.Size(143, 33);
+            this.guna2DateTimePicker3.TabIndex = 115;
+            this.guna2DateTimePicker3.Value = new System.DateTime(2023, 2, 27, 17, 10, 20, 563);
             // 
             // Finances
             // 
@@ -820,5 +851,7 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker3;
+        private System.Windows.Forms.Label label13;
     }
 }
