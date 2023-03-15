@@ -116,7 +116,7 @@ namespace _DairyFarmSystem
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Cow Saved Successfully");
                     Con.Close();
-                    
+                    populate();
 
 
                 }
