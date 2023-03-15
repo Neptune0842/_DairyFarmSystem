@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace _DairyFarmSystem
 {
@@ -16,6 +17,8 @@ namespace _DairyFarmSystem
         {
             InitializeComponent();
         }
+
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Administrator\Documents\DairyFarmDb.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
         {
@@ -82,6 +85,44 @@ namespace _DairyFarmSystem
             DashBoard Ob = new DashBoard();
             Ob.Show();
             this.Hide();
+        }
+        int age = 0;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (CowNameTb.Text == "" || EarTagTb.Text == "" || ColorTb.Text == "" || BreedTb.Text == "" || WeightTb.Text == "" || AgeTb.Text == "" || PastureTb.Text == "")
+            {
+                MessageBox.Show("Missing Information");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    string Query = "Insert into CowTbl values('" + CowNameTb.Text + "', '" + EarTagTb.Text + "', '" + ColorTb.Text + "', '" + BreedTb.Text + "', " + Convert.ToInt32(AgeTb.Text) + ", " + Convert.ToInt32(WeightTb.Text) + ", '" + PastureTb.Text + "')";
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Cow Saved Successfully");
+                    Con.Close();
+                    
+
+
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
+
+        private void DOBDate_ValueChanged(object sender, EventArgs e)
+        {
+            age = Convert.ToInt32((DateTime.Today.Date - DOBDate.Value.Date).Days) / 365;
+        }
+
+        private void DOBDate_MouseLeave(object sender, EventArgs e)
+        {
+            age = Convert.ToInt32((DateTime.Today.Date - DOBDate.Value.Date).Days) / 365;
+            AgeTb.Text = "" + age;
         }
     }
 }
