@@ -16,6 +16,7 @@ namespace _DairyFarmSystem
         public Cows()
         {
             InitializeComponent();
+            populate();
         }
 
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Administrator\Documents\DairyFarmDb.mdf;Integrated Security=True;Connect Timeout=30");
@@ -86,6 +87,18 @@ namespace _DairyFarmSystem
             Ob.Show();
             this.Hide();
         }
+        private void populate()
+        {
+            Con.Open();
+            string Query = "select * from CowTbl";
+            SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            CowsDGV.DataSource = ds.Tables[0];
+            Con.Close();
+        }
+
         int age = 0;
         private void button1_Click(object sender, EventArgs e)
         {
