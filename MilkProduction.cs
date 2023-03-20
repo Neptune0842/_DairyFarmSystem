@@ -90,7 +90,7 @@ namespace _DairyFarmSystem
         {
             Con.Open();
             string Query = "select * from CowTbl";
-            SqlDataAdapter sda = new SqlDataAdapter(Query, con);
+            SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
             sda.Fill(ds);
@@ -121,14 +121,19 @@ namespace _DairyFarmSystem
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Milk Saved");
                     Con.Close();
-                    //populate();
-                    //Clear();
+                    populate();
+                    Clear();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Clear();
         }
     }
 }
