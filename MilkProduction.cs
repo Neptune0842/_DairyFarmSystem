@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace _DairyFarmSystem
         public MilkProduction()
         {
             InitializeComponent();
+            FillCowId();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -62,6 +64,52 @@ namespace _DairyFarmSystem
             DashBoard Ob = new DashBoard();
             Ob.Show();
             this.Hide();
+        }
+
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Administrator\Documents\DairyFarmDb.mdf;Integrated Security=True;Connect Timeout=30");
+
+        private void FillCowId()
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("select CowId from CowTbl",Con);
+            SqlDataReader Rdr;
+            Rdr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("CowId", typeof(int));
+            dt.Load(Rdr);
+            CowIdCb.ValueMember = "CowId";
+            CowIdCb.DataSource = dt;
+            Con.Close();
+        }
+        private void CowIdCb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (CowIdCb.SelectedIndex == -1 || CowNameTb.Text == "" || MorningMilkTb.Text == "" || EveningMilkTb.Text == "" || NoonMilkTb.Text == "" || TotalTb.Text == "")
+            {
+                MessageBox.Show("Missing Data");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    string Query = "insert into MilkTbl values(" + CowIdCb.SelectedValue.ToString() + ",'" + CowNameTb.Text + "'," + MorningMilkTb.Text + "," + NoonMilkTb.Text + "," + EveningMilkTb.Text + "," + TotalTb.Text + ", '" + Date.Value.Date + "')";
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Milk Saved");
+                    Con.Close();
+                    //populate();
+                    //Clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
 }
