@@ -106,7 +106,7 @@ namespace _DairyFarmSystem
             AgeTb.Text = "";
             WeightTb.Text = "";
             PastureTb.Text = "";
-            //key = 0;
+            key = 0;
         }
 
         int age = 0;
@@ -172,6 +172,59 @@ namespace _DairyFarmSystem
         private void button3_Click(object sender, EventArgs e)
         {
             Clear();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (key == 0)
+            {
+                MessageBox.Show("Select Cow to Delete");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    string Query = "delete from CowTbl where CowId=" + key + ";";
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Deleted Successfully");
+                    Con.Close();
+                    populate();
+
+
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (CowNameTb.Text == "" || EarTagTb.Text == "" || ColorTb.Text == "" || BreedTb.Text == "" || WeightTb.Text == "" || AgeTb.Text == "" || PastureTb.Text == "")
+            {
+                MessageBox.Show("Missing Data");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    string Query = "update CowTbl set CowName='" + CowNameTb.Text + "', EarTag= '" + EarTagTb.Text + "',Color='" + ColorTb.Text + "',Breed='" + BreedTb.Text + "',Age=" + AgeTb.Text + ",WeightAtBirth=" + WeightTb.Text + ",Pasture='" + PastureTb.Text + "' where CowId=" + key + " ;";
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Cow Updated");
+                    Con.Close();
+                    populate();
+                    Clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
 }
