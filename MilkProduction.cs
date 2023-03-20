@@ -85,7 +85,17 @@ namespace _DairyFarmSystem
         {
 
         }
-
+        private void populate()
+        {
+            Con.Open();
+            string Query = "select * from CowTbl";
+            SqlDataAdapter sda = new SqlDataAdapter(Query, con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            MilkDGV.DataSource = ds.Tables[0];
+            Con.Close();
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             if (CowIdCb.SelectedIndex == -1 || CowNameTb.Text == "" || MorningMilkTb.Text == "" || EveningMilkTb.Text == "" || NoonMilkTb.Text == "" || TotalTb.Text == "")
