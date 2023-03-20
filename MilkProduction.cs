@@ -17,6 +17,7 @@ namespace _DairyFarmSystem
         {
             InitializeComponent();
             FillCowId();
+            populate();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -95,6 +96,14 @@ namespace _DairyFarmSystem
             sda.Fill(ds);
             MilkDGV.DataSource = ds.Tables[0];
             Con.Close();
+        }
+        private void Clear()
+        {
+            CowNameTb.Text = "";
+            MorningMilkTb.Text = "";
+            NoonMilkTb.Text = "";
+            EveningMilkTb.Text = "";
+            TotalTb.Text = "";
         }
         private void button1_Click(object sender, EventArgs e)
         {
