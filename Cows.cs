@@ -98,6 +98,16 @@ namespace _DairyFarmSystem
             CowsDGV.DataSource = ds.Tables[0];
             Con.Close();
         }
+        private void Clear()
+        {
+            CowNameTb.Text = "";
+            EarTagTb.Text = "";
+            ColorTb.Text = "";
+            AgeTb.Text = "";
+            WeightTb.Text = "";
+            PastureTb.Text = "";
+            //key = 0;
+        }
 
         int age = 0;
         private void button1_Click(object sender, EventArgs e)
@@ -117,7 +127,7 @@ namespace _DairyFarmSystem
                     MessageBox.Show("Cow Saved Successfully");
                     Con.Close();
                     populate();
-
+                    Clear();
 
                 }
                 catch (Exception Ex)
@@ -136,6 +146,13 @@ namespace _DairyFarmSystem
         {
             age = Convert.ToInt32((DateTime.Today.Date - DOBDate.Value.Date).Days) / 365;
             AgeTb.Text = "" + age;
+        }
+        int key = 0;
+      
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Clear()
         }
     }
 }
