@@ -148,11 +148,30 @@ namespace _DairyFarmSystem
             AgeTb.Text = "" + age;
         }
         int key = 0;
-      
+        private void CowsDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CowNameTb.Text = CowsDGV.SelectedRows[0].Cells[1].Value.ToString();
+            EarTagTb.Text = CowsDGV.SelectedRows[0].Cells[2].Value.ToString();
+            ColorTb.Text = CowsDGV.SelectedRows[0].Cells[3].Value.ToString();
+            BreedTb.Text = CowsDGV.SelectedRows[0].Cells[4].Value.ToString();
+            WeightTb.Text = CowsDGV.SelectedRows[0].Cells[6].Value.ToString();
+            PastureTb.Text = CowsDGV.SelectedRows[0].Cells[7].Value.ToString();
+            if (CowNameTb.Text == "")
+            {
+                key = 0;
+                age = 0;
+            }
+            else
+            {
+                key = Convert.ToInt32(CowsDGV.SelectedRows[0].Cells[0].Value.ToString());
+                age = Convert.ToInt32(CowsDGV.SelectedRows[0].Cells[5].Value.ToString());
+            }
+
+        }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Clear()
+            Clear();
         }
     }
 }
