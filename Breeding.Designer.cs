@@ -419,6 +419,7 @@
             this.button1.TabIndex = 51;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label13
             // 
@@ -445,6 +446,7 @@
             // CowAgeTb
             // 
             this.CowAgeTb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.CowAgeTb.Enabled = false;
             this.CowAgeTb.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CowAgeTb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.CowAgeTb.HintForeColor = System.Drawing.Color.Empty;
