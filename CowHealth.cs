@@ -126,7 +126,7 @@ namespace _DairyFarmSystem
             EventTb.Text = "";
             TreatmentTb.Text = "";
             VetNameTb.Text = "";
-            //key = 0;
+            key = 0;
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -157,6 +157,27 @@ namespace _DairyFarmSystem
         private void button3_Click(object sender, EventArgs e)
         {
             Clear();
+        }
+        int key = 0;
+        private void HealthDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CowIdCb.SelectedValue = HealthDGV.SelectedRows[0].Cells[1].Value.ToString();
+            CowNameTb.Text = HealthDGV.SelectedRows[0].Cells[2].Value.ToString();
+            Date.Text = HealthDGV.SelectedRows[0].Cells[3].Value.ToString();
+            EventTb.Text = HealthDGV.SelectedRows[0].Cells[4].Value.ToString();
+            DiagnosisTb.Text = HealthDGV.SelectedRows[0].Cells[5].Value.ToString();
+            TreatmentTb.Text = HealthDGV.SelectedRows[0].Cells[6].Value.ToString();
+            CostTb.Text = HealthDGV.SelectedRows[0].Cells[7].Value.ToString();
+            VetNameTb.Text = HealthDGV.SelectedRows[0].Cells[7].Value.ToString();
+            if (CowNameTb.Text == "")
+            {
+                key = 0;
+
+            }
+            else
+            {
+                key = Convert.ToInt32(HealthDGV.SelectedRows[0].Cells[0].Value.ToString());
+            }
         }
     }
 }
