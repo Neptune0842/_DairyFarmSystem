@@ -241,5 +241,10 @@ namespace _DairyFarmSystem
                 }
             }
         }
+
+        private void MilkProduction_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
