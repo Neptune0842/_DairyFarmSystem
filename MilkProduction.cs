@@ -104,6 +104,7 @@ namespace _DairyFarmSystem
             NoonMilkTb.Text = "";
             EveningMilkTb.Text = "";
             TotalTb.Text = "";
+            key = 0;
         }
         private void GetCowName()
         {
@@ -185,8 +186,60 @@ namespace _DairyFarmSystem
 
         private void EveningMilkTb_OnValueChanged(object sender, EventArgs e)
         {
-            int total = Convert.ToInt32(MorningMilkTb.Text) + Convert.ToInt32(EveningMilkTb.Text) + Convert.ToInt32(NoonMilkTb.Text);
-            TotalTb.Text = "" + total;
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (key == 0)
+            {
+                MessageBox.Show("Missing Data");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    string Query = "delete from MilkTbl where MId= " + key + ";";
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Producet Deleted");
+                    Con.Close();
+                    populate();
+                    Clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        
+    }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (CowIdCb.SelectedIndex == -1 || CowNameTb.Text == "" || MorningMilkTb.Text == "" || EveningMilkTb.Text == "" || NoonMilkTb.Text == "" || TotalTb.Text == "")
+            {
+                MessageBox.Show("Select Product");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    string Query = "update MilkTbl set CowName='" + CowNameTb.Text + "', AmMilk= " + MorningMilkTb.Text + ",NoonMilk=" + NoonMilkTb.Text + ",PmMilk=" + EveningMilkTb.Text + ",TotalMilk=" + TotalTb.Text + ",DateProd='" + Date.Value.Date + "' where MId=" + key + " ;";
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Product Updated");
+                    Con.Close();
+                    populate();
+                    Clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
 }
