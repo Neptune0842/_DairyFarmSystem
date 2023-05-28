@@ -364,8 +364,9 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(123, 44);
             this.button3.TabIndex = 54;
-            this.button3.Text = "Update";
+            this.button3.Text = "Reset";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label1
             // 
@@ -391,6 +392,7 @@
             this.button4.TabIndex = 53;
             this.button4.Text = "Delete";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button2
             // 
@@ -428,9 +430,9 @@
             this.label13.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label13.Location = new System.Drawing.Point(862, 435);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(149, 37);
+            this.label13.Size = new System.Drawing.Size(215, 37);
             this.label13.TabIndex = 50;
-            this.label13.Text = "Cows List";
+            this.label13.Text = "Breed Reports";
             // 
             // label12
             // 
@@ -725,7 +727,7 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.BreedDGV.DefaultCellStyle = dataGridViewCellStyle6;
             this.BreedDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.BreedDGV.Location = new System.Drawing.Point(402, 496);
+            this.BreedDGV.Location = new System.Drawing.Point(402, 518);
             this.BreedDGV.Name = "BreedDGV";
             this.BreedDGV.RowHeadersVisible = false;
             this.BreedDGV.Size = new System.Drawing.Size(1045, 331);
@@ -751,6 +753,7 @@
             this.BreedDGV.ThemeStyle.RowsStyle.Height = 22;
             this.BreedDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.BreedDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.BreedDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BreedDGV_CellContentClick_1);
             // 
             // Breeding
             // 

@@ -79,7 +79,7 @@ namespace _DairyFarmSystem
         private void populate()
         {
             Con.Open();
-            string Query = "select * from HealthTbl";
+            string Query = "select * from BreedTbl";
             SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
@@ -87,6 +87,7 @@ namespace _DairyFarmSystem
             BreedDGV.DataSource = ds.Tables[0];
             Con.Close();
         }
+
         private void GetCowName()
         {
             Con.Open();
@@ -98,6 +99,7 @@ namespace _DairyFarmSystem
             foreach (DataRow dr in dt.Rows)
             {
                 CowNameTb.Text = dr["CowName"].ToString();
+                CowAgeTb.Text = dr["Age"].ToString();
             }
 
             Con.Close();
@@ -110,6 +112,41 @@ namespace _DairyFarmSystem
         private void CowIdCb_SelectionChangeCommitted(object sender, EventArgs e)
         {
             GetCowName();
+        }
+        private void Clear()
+        {
+            CowIdCb.SelectedIndex = -1;
+            CowNameTb.Text = "";
+            CowAgeTb.Text = "";
+            RemarksTb.Text = "";
+            key = 0;
+        }
+        int key = 0;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (CowIdCb.SelectedIndex == -1 || CowNameTb.Text == "" || CowAgeTb.Text == "" || RemarksTb.Text == "")
+            {
+                MessageBox.Show("Missing Data");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    string Query = "insert into BreedTbl values('" + HeatDate.Value.Date + "','" + BreedDate.Value.Date + "','" + CowIdCb.SelectedValue.ToString() + "','" + CowNameTb.Text + "','" + PregDate.Value.Date + "','" + ExpDate.Value.Date + "', '" + DateCalved.Value.Date + "', '" + CowAgeTb.Text + "', '" + RemarksTb.Text + "')";
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Breed saved");
+                    Con.Close();
+                    populate();
+                    Clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+               
+            }
         }
     }
 }
