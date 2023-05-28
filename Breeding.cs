@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -57,6 +58,52 @@ namespace _DairyFarmSystem
             DashBoard Ob = new DashBoard();
             Ob.Show();
             this.Hide();
+        }
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Administrator\Documents\DairyFarmDb.mdf;Integrated Security=True;Connect Timeout=30");
+
+        private void FillCowId()
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("select CowId from CowsTbl");
+            SqlDataReader Rdr;
+            Rdr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("CowId", typeof(int));
+            dt.Load(Rdr);
+            CowIdCb.ValueMember = "CowId";
+            CowIdCb.DataSource = dt;
+            Con.Close();
+        }
+
+        private void populate()
+        {
+            Con.Open();
+            string Query = "select * from BreedTbl";
+            SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            HealthDGV.DataSource = ds.Tables[0];
+            Con.Close();
+        }
+        private void GetCowName()
+        {
+            Con.Open();
+            String query = "select * from CowTbl where CowId=" + CowIdCb.SelectedValue.ToString() + "";
+            SqlCommand cmd = new SqlCommand(query, Con);
+            DataTable dt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            sda.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                CowNameTb.Text = dr["CowName"].ToString();
+            }
+
+            Con.Close();
+        }
+        private void Breeding_Load(object sender, EventArgs e)
+        {
+             
         }
     }
 }
