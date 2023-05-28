@@ -71,7 +71,7 @@ namespace _DairyFarmSystem
         private void FillCowId()
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("select CowId from CowTbl", Con);
+            SqlCommand cmd = new SqlCommand("select CowId from CowTbl");
             SqlDataReader Rdr;
             Rdr = cmd.ExecuteReader();
             DataTable dt = new DataTable();

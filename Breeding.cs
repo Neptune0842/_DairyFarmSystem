@@ -16,6 +16,8 @@ namespace _DairyFarmSystem
         public Breeding()
         {
             InitializeComponent();
+            populate();
+            FillCowId();
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -64,7 +66,7 @@ namespace _DairyFarmSystem
         private void FillCowId()
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("select CowId from CowsTbl");
+            SqlCommand cmd = new SqlCommand("select CowId from CowTbl");
             SqlDataReader Rdr;
             Rdr = cmd.ExecuteReader();
             DataTable dt = new DataTable();
@@ -78,12 +80,12 @@ namespace _DairyFarmSystem
         private void populate()
         {
             Con.Open();
-            string Query = "select * from BreedTbl";
+            string Query = "select * from HealthTbl";
             SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
             sda.Fill(ds);
-            HealthDGV.DataSource = ds.Tables[0];
+            BreedDGV.DataSource = ds.Tables[0];
             Con.Close();
         }
         private void GetCowName()
@@ -104,6 +106,11 @@ namespace _DairyFarmSystem
         private void Breeding_Load(object sender, EventArgs e)
         {
              
+        }
+
+        private void CowIdCb_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            GetCowName();
         }
     }
 }
