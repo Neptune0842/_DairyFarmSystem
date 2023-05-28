@@ -84,12 +84,12 @@ namespace _DairyFarmSystem
         }
         private void CowIdCb_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+             
         }
         private void populate()
         {
             Con.Open();
-            string Query = "select * from CowTbl";
+            string Query = "select * from MilkTbl";
             SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
@@ -104,6 +104,21 @@ namespace _DairyFarmSystem
             NoonMilkTb.Text = "";
             EveningMilkTb.Text = "";
             TotalTb.Text = "";
+        }
+        private void GetCowName()
+        {
+            Con.Open();
+            String query = "select * from CowTbl where CowId=" + CowIdCb.SelectedValue.ToString() + "";
+            SqlCommand cmd = new SqlCommand(query, Con);
+            DataTable dt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            sda.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                CowNameTb.Text = dr["CowName"].ToString();
+            }
+
+            Con.Close();
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -134,6 +149,44 @@ namespace _DairyFarmSystem
         private void button3_Click(object sender, EventArgs e)
         {
             Clear();
+        }
+
+        int key = 0;
+        private void MilkDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CowIdCb.SelectedValue = MilkDGV.SelectedRows[0].Cells[1].Value.ToString();
+            CowNameTb.Text = MilkDGV.SelectedRows[0].Cells[2].Value.ToString();
+            MorningMilkTb.Text = MilkDGV.SelectedRows[0].Cells[3].Value.ToString();
+            EveningMilkTb.Text = MilkDGV.SelectedRows[0].Cells[4].Value.ToString();
+            NoonMilkTb.Text = MilkDGV.SelectedRows[0].Cells[5].Value.ToString();
+            TotalTb.Text = MilkDGV.SelectedRows[0].Cells[6].Value.ToString();
+            Date.Text = MilkDGV.SelectedRows[0].Cells[7].Value.ToString();
+            if (CowNameTb.Text == "")
+            {
+                key = 0;
+            }
+            else
+            {
+                key = Convert.ToInt32(MilkDGV.SelectedRows[0].Cells[0].Value.ToString());
+            }
+
+        }
+
+        private void CowIdCb_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            GetCowName();
+        }
+
+        private void EveningMilkTb_MouseUp(object sender, MouseEventArgs e)
+        {
+            int total = Convert.ToInt32(MorningMilkTb.Text) + Convert.ToInt32(EveningMilkTb.Text) + Convert.ToInt32(NoonMilkTb.Text);
+            TotalTb.Text = "" + total;
+        }
+
+        private void EveningMilkTb_OnValueChanged(object sender, EventArgs e)
+        {
+            int total = Convert.ToInt32(MorningMilkTb.Text) + Convert.ToInt32(EveningMilkTb.Text) + Convert.ToInt32(NoonMilkTb.Text);
+            TotalTb.Text = "" + total;
         }
     }
 }
