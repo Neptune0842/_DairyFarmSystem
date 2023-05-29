@@ -17,6 +17,7 @@ namespace _DairyFarmSystem
         {
             InitializeComponent();
             FillEmpId();
+            populate();
         }
 
         private void label5_Click(object sender, EventArgs e)
