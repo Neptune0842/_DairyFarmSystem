@@ -74,11 +74,11 @@
             this.label100 = new System.Windows.Forms.Label();
             this.guna2GradientPanel8 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label13 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.HighAmt = new System.Windows.Forms.Label();
+            this.HighDate = new System.Windows.Forms.Label();
             this.guna2GradientPanel9 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.HighExp = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.IncLbl = new System.Windows.Forms.Label();
             this.ExpLbl = new System.Windows.Forms.Label();
@@ -600,8 +600,8 @@
             // guna2GradientPanel8
             // 
             this.guna2GradientPanel8.BorderRadius = 15;
-            this.guna2GradientPanel8.Controls.Add(this.label21);
-            this.guna2GradientPanel8.Controls.Add(this.label20);
+            this.guna2GradientPanel8.Controls.Add(this.HighDate);
+            this.guna2GradientPanel8.Controls.Add(this.HighAmt);
             this.guna2GradientPanel8.Controls.Add(this.label13);
             this.guna2GradientPanel8.FillColor = System.Drawing.Color.Navy;
             this.guna2GradientPanel8.FillColor2 = System.Drawing.Color.DodgerBlue;
@@ -622,35 +622,35 @@
             this.label13.TabIndex = 103;
             this.label13.Text = "Highest Scale";
             // 
-            // label20
+            // HighAmt
             // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(16, 71);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(58, 32);
-            this.label20.TabIndex = 104;
-            this.label20.Text = "Egp";
+            this.HighAmt.AutoSize = true;
+            this.HighAmt.BackColor = System.Drawing.Color.Transparent;
+            this.HighAmt.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HighAmt.ForeColor = System.Drawing.Color.White;
+            this.HighAmt.Location = new System.Drawing.Point(16, 71);
+            this.HighAmt.Name = "HighAmt";
+            this.HighAmt.Size = new System.Drawing.Size(58, 32);
+            this.HighAmt.TabIndex = 104;
+            this.HighAmt.Text = "Egp";
             // 
-            // label21
+            // HighDate
             // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(62, 128);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(119, 32);
-            this.label21.TabIndex = 105;
-            this.label21.Text = "Sale Date";
+            this.HighDate.AutoSize = true;
+            this.HighDate.BackColor = System.Drawing.Color.Transparent;
+            this.HighDate.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HighDate.ForeColor = System.Drawing.Color.White;
+            this.HighDate.Location = new System.Drawing.Point(62, 128);
+            this.HighDate.Name = "HighDate";
+            this.HighDate.Size = new System.Drawing.Size(119, 32);
+            this.HighDate.TabIndex = 105;
+            this.HighDate.Text = "Sale Date";
             // 
             // guna2GradientPanel9
             // 
             this.guna2GradientPanel9.BorderRadius = 15;
             this.guna2GradientPanel9.Controls.Add(this.label22);
-            this.guna2GradientPanel9.Controls.Add(this.label23);
+            this.guna2GradientPanel9.Controls.Add(this.HighExp);
             this.guna2GradientPanel9.Controls.Add(this.label24);
             this.guna2GradientPanel9.FillColor = System.Drawing.Color.Teal;
             this.guna2GradientPanel9.FillColor2 = System.Drawing.Color.Aquamarine;
@@ -671,17 +671,17 @@
             this.label22.TabIndex = 105;
             this.label22.Text = "Sale Date";
             // 
-            // label23
+            // HighExp
             // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(16, 71);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(58, 32);
-            this.label23.TabIndex = 104;
-            this.label23.Text = "Egp";
+            this.HighExp.AutoSize = true;
+            this.HighExp.BackColor = System.Drawing.Color.Transparent;
+            this.HighExp.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HighExp.ForeColor = System.Drawing.Color.White;
+            this.HighExp.Location = new System.Drawing.Point(16, 71);
+            this.HighExp.Name = "HighExp";
+            this.HighExp.Size = new System.Drawing.Size(58, 32);
+            this.HighExp.TabIndex = 104;
+            this.HighExp.Text = "Egp";
             // 
             // label24
             // 
@@ -689,11 +689,11 @@
             this.label24.BackColor = System.Drawing.Color.Transparent;
             this.label24.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(81, 11);
+            this.label24.Location = new System.Drawing.Point(52, 11);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(167, 32);
+            this.label24.Size = new System.Drawing.Size(252, 32);
             this.label24.TabIndex = 103;
-            this.label24.Text = "Highest Scale";
+            this.label24.Text = "Highest Expenditure";
             // 
             // IncLbl
             // 
@@ -880,12 +880,12 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel7;
         private System.Windows.Forms.Label label100;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel8;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label HighDate;
+        private System.Windows.Forms.Label HighAmt;
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel9;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label HighExp;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label IncLbl;
         private System.Windows.Forms.Label BalanceLbl;
