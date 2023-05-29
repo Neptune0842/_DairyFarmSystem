@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employees));
             this.EmployeeDGV = new Guna.UI2.WinForms.Guna2DataGridView();
             this.GenderCb = new System.Windows.Forms.ComboBox();
@@ -54,6 +54,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.EmpPassTb = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeDGV)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -62,26 +64,26 @@
             // 
             // EmployeeDGV
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.EmployeeDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EmployeeDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.EmployeeDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EmployeeDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.EmployeeDGV.ColumnHeadersHeight = 25;
             this.EmployeeDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.EmployeeDGV.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.EmployeeDGV.DefaultCellStyle = dataGridViewCellStyle3;
             this.EmployeeDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.EmployeeDGV.Location = new System.Drawing.Point(394, 496);
             this.EmployeeDGV.Name = "EmployeeDGV";
@@ -247,7 +249,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Cambria", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DimGray;
-            this.label11.Location = new System.Drawing.Point(885, 266);
+            this.label11.Location = new System.Drawing.Point(750, 263);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(122, 34);
             this.label11.TabIndex = 97;
@@ -265,7 +267,7 @@
             this.AddressTb.LineIdleColor = System.Drawing.Color.Gray;
             this.AddressTb.LineMouseHoverColor = System.Drawing.Color.MidnightBlue;
             this.AddressTb.LineThickness = 4;
-            this.AddressTb.Location = new System.Drawing.Point(891, 306);
+            this.AddressTb.Location = new System.Drawing.Point(756, 303);
             this.AddressTb.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.AddressTb.Name = "AddressTb";
             this.AddressTb.Size = new System.Drawing.Size(248, 34);
@@ -277,7 +279,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Cambria", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DimGray;
-            this.label9.Location = new System.Drawing.Point(644, 266);
+            this.label9.Location = new System.Drawing.Point(509, 263);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(100, 34);
             this.label9.TabIndex = 95;
@@ -295,7 +297,7 @@
             this.PhoneTb.LineIdleColor = System.Drawing.Color.Gray;
             this.PhoneTb.LineMouseHoverColor = System.Drawing.Color.MidnightBlue;
             this.PhoneTb.LineThickness = 4;
-            this.PhoneTb.Location = new System.Drawing.Point(650, 306);
+            this.PhoneTb.Location = new System.Drawing.Point(515, 303);
             this.PhoneTb.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.PhoneTb.Name = "PhoneTb";
             this.PhoneTb.Size = new System.Drawing.Size(209, 34);
@@ -384,11 +386,43 @@
             this.pictureBox8.TabIndex = 13;
             this.pictureBox8.TabStop = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Cambria", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.Location = new System.Drawing.Point(1033, 263);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(143, 34);
+            this.label4.TabIndex = 111;
+            this.label4.Text = "Password";
+            // 
+            // EmpPassTb
+            // 
+            this.EmpPassTb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.EmpPassTb.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpPassTb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.EmpPassTb.HintForeColor = System.Drawing.Color.Empty;
+            this.EmpPassTb.HintText = "";
+            this.EmpPassTb.isPassword = false;
+            this.EmpPassTb.LineFocusedColor = System.Drawing.Color.MidnightBlue;
+            this.EmpPassTb.LineIdleColor = System.Drawing.Color.Gray;
+            this.EmpPassTb.LineMouseHoverColor = System.Drawing.Color.MidnightBlue;
+            this.EmpPassTb.LineThickness = 4;
+            this.EmpPassTb.Location = new System.Drawing.Point(1039, 303);
+            this.EmpPassTb.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.EmpPassTb.Name = "EmpPassTb";
+            this.EmpPassTb.Size = new System.Drawing.Size(248, 34);
+            this.EmpPassTb.TabIndex = 110;
+            this.EmpPassTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // Employees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1500, 900);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.EmpPassTb);
             this.Controls.Add(this.EmployeeDGV);
             this.Controls.Add(this.GenderCb);
             this.Controls.Add(this.DoB);
@@ -448,5 +482,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label label4;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox EmpPassTb;
     }
 }

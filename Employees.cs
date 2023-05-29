@@ -45,11 +45,12 @@ namespace _DairyFarmSystem
             AddressTb.Text = "";
             GenderCb.SelectedIndex = -1;
             key = 0;
+            EmpPassTb.Text = "";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (EmpNameTb.Text == "" || GenderCb.SelectedIndex == -1 || AddressTb.Text == "" || PhoneTb.Text == "")
+            if (EmpNameTb.Text == "" || GenderCb.SelectedIndex == -1 || AddressTb.Text == "" || PhoneTb.Text == "" || EmpPassTb.Text == "")
             {
                 MessageBox.Show("Missing Data");
             }
@@ -58,7 +59,7 @@ namespace _DairyFarmSystem
                 try
                 {
                     Con.Open();
-                    string Query = "insert into EmployeeTbl values('" + EmpNameTb.Text + "','" + DoB.Value.Date + "','" + GenderCb.SelectedValue.ToString() + "','" + PhoneTb.Text + "','" + AddressTb.Text + "')";
+                    string Query = "insert into EmployeeTbl values('" + EmpNameTb.Text + "','" + DoB.Value.Date + "','" + GenderCb.SelectedValue.ToString() + "','" + PhoneTb.Text + "','" + AddressTb.Text + "','" +EmpPassTb.Text +"')";
                     SqlCommand cmd = new SqlCommand(Query, Con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Employee Saved");
@@ -86,7 +87,7 @@ namespace _DairyFarmSystem
             GenderCb.Text = EmployeeDGV.SelectedRows[0].Cells[3].Value.ToString();
             PhoneTb.Text = EmployeeDGV.SelectedRows[0].Cells[4].Value.ToString();
             AddressTb.Text = EmployeeDGV.SelectedRows[0].Cells[5].Value.ToString();
-            //PassTb.Text = EmployeeDGV.SelectedRows[0].Cells[6].Value.ToString();
+            EmpPassTb.Text = EmployeeDGV.SelectedRows[0].Cells[6].Value.ToString();
 
             if (EmpNameTb.Text == "")
             {
