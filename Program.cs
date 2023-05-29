@@ -16,7 +16,7 @@ namespace _DairyFarmSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MilkSales());
+            Application.Run(new Finances());
         }
     }
 }

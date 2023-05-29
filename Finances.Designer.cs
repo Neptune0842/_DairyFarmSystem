@@ -66,10 +66,10 @@
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.button5 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.ExpDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.bunifuMaterialTextbox4 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.AmountTb = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -403,10 +403,10 @@
             this.panel9.Controls.Add(this.guna2DataGridView1);
             this.panel9.Controls.Add(this.button5);
             this.panel9.Controls.Add(this.label10);
-            this.panel9.Controls.Add(this.guna2DateTimePicker1);
+            this.panel9.Controls.Add(this.ExpDate);
             this.panel9.Controls.Add(this.comboBox1);
             this.panel9.Controls.Add(this.label8);
-            this.panel9.Controls.Add(this.bunifuMaterialTextbox4);
+            this.panel9.Controls.Add(this.AmountTb);
             this.panel9.Controls.Add(this.label9);
             this.panel9.Controls.Add(this.label3);
             this.panel9.Location = new System.Drawing.Point(407, 116);
@@ -483,31 +483,37 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Cambria", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DimGray;
-            this.label10.Location = new System.Drawing.Point(13, 13);
+            this.label10.Location = new System.Drawing.Point(24, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(208, 34);
+            this.label10.Size = new System.Drawing.Size(180, 34);
             this.label10.TabIndex = 111;
-            this.label10.Text = "Pregnancy Date";
+            this.label10.Text = "Expenditures";
             // 
-            // guna2DateTimePicker1
+            // ExpDate
             // 
-            this.guna2DateTimePicker1.BackColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.Empty;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Cambria", 14.25F);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(19, 50);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(209, 36);
-            this.guna2DateTimePicker1.TabIndex = 110;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2023, 2, 27, 17, 10, 20, 563);
+            this.ExpDate.BackColor = System.Drawing.Color.White;
+            this.ExpDate.Checked = true;
+            this.ExpDate.FillColor = System.Drawing.Color.Empty;
+            this.ExpDate.Font = new System.Drawing.Font("Cambria", 14.25F);
+            this.ExpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.ExpDate.Location = new System.Drawing.Point(19, 53);
+            this.ExpDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.ExpDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.ExpDate.Name = "ExpDate";
+            this.ExpDate.Size = new System.Drawing.Size(209, 36);
+            this.ExpDate.TabIndex = 110;
+            this.ExpDate.Value = new System.DateTime(2023, 2, 27, 17, 10, 20, 563);
             // 
             // comboBox1
             // 
             this.comboBox1.Font = new System.Drawing.Font("Cambria", 21.75F);
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Maintenence",
+            "Food",
+            "Salary",
+            "Tax",
+            "Other"});
             this.comboBox1.Location = new System.Drawing.Point(21, 132);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(217, 42);
@@ -524,24 +530,24 @@
             this.label8.TabIndex = 108;
             this.label8.Text = "Amount";
             // 
-            // bunifuMaterialTextbox4
+            // AmountTb
             // 
-            this.bunifuMaterialTextbox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox4.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuMaterialTextbox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox4.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox4.HintText = "";
-            this.bunifuMaterialTextbox4.isPassword = false;
-            this.bunifuMaterialTextbox4.LineFocusedColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuMaterialTextbox4.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox4.LineMouseHoverColor = System.Drawing.Color.MidnightBlue;
-            this.bunifuMaterialTextbox4.LineThickness = 4;
-            this.bunifuMaterialTextbox4.Location = new System.Drawing.Point(21, 229);
-            this.bunifuMaterialTextbox4.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.bunifuMaterialTextbox4.Name = "bunifuMaterialTextbox4";
-            this.bunifuMaterialTextbox4.Size = new System.Drawing.Size(209, 34);
-            this.bunifuMaterialTextbox4.TabIndex = 107;
-            this.bunifuMaterialTextbox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.AmountTb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.AmountTb.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AmountTb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.AmountTb.HintForeColor = System.Drawing.Color.Empty;
+            this.AmountTb.HintText = "";
+            this.AmountTb.isPassword = false;
+            this.AmountTb.LineFocusedColor = System.Drawing.Color.MidnightBlue;
+            this.AmountTb.LineIdleColor = System.Drawing.Color.Gray;
+            this.AmountTb.LineMouseHoverColor = System.Drawing.Color.MidnightBlue;
+            this.AmountTb.LineThickness = 4;
+            this.AmountTb.Location = new System.Drawing.Point(21, 229);
+            this.AmountTb.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.AmountTb.Name = "AmountTb";
+            this.AmountTb.Size = new System.Drawing.Size(209, 34);
+            this.AmountTb.TabIndex = 107;
+            this.AmountTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label9
             // 
@@ -844,10 +850,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label8;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox4;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox AmountTb;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker ExpDate;
         private System.Windows.Forms.Button button5;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private System.Windows.Forms.Panel panel10;
