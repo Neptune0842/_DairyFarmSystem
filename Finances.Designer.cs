@@ -85,8 +85,9 @@
             this.EmpIdLbl = new System.Windows.Forms.Label();
             this.ExpDGV = new Guna.UI2.WinForms.Guna2DataGridView();
             this.IncDGV = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.ExpDateFilter = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label20 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -108,6 +109,7 @@
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExpDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IncDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -403,7 +405,7 @@
             // panel9
             // 
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.guna2DateTimePicker1);
+            this.panel9.Controls.Add(this.ExpDateFilter);
             this.panel9.Controls.Add(this.label20);
             this.panel9.Controls.Add(this.ExpDGV);
             this.panel9.Controls.Add(this.button5);
@@ -530,6 +532,7 @@
             // panel10
             // 
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel10.Controls.Add(this.pictureBox9);
             this.panel10.Controls.Add(this.IncDGV);
             this.panel10.Controls.Add(this.IncomeDateFilter);
             this.panel10.Controls.Add(this.label13);
@@ -791,20 +794,21 @@
             this.IncDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.IncDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // guna2DateTimePicker1
+            // ExpDateFilter
             // 
-            this.guna2DateTimePicker1.BackColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.Empty;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Cambria", 14.25F);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(294, 53);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(143, 33);
-            this.guna2DateTimePicker1.TabIndex = 117;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2023, 2, 27, 17, 10, 20, 563);
+            this.ExpDateFilter.BackColor = System.Drawing.Color.White;
+            this.ExpDateFilter.Checked = true;
+            this.ExpDateFilter.FillColor = System.Drawing.Color.Empty;
+            this.ExpDateFilter.Font = new System.Drawing.Font("Cambria", 14.25F);
+            this.ExpDateFilter.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.ExpDateFilter.Location = new System.Drawing.Point(294, 53);
+            this.ExpDateFilter.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.ExpDateFilter.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.ExpDateFilter.Name = "ExpDateFilter";
+            this.ExpDateFilter.Size = new System.Drawing.Size(143, 33);
+            this.ExpDateFilter.TabIndex = 117;
+            this.ExpDateFilter.Value = new System.DateTime(2023, 2, 27, 17, 10, 20, 563);
+            this.ExpDateFilter.ValueChanged += new System.EventHandler(this.guna2DateTimePicker1_ValueChanged);
             // 
             // label20
             // 
@@ -816,6 +820,17 @@
             this.label20.Size = new System.Drawing.Size(73, 28);
             this.label20.TabIndex = 116;
             this.label20.Text = "Filter";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(739, 16);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(38, 29);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 117;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // Finances
             // 
@@ -864,6 +879,7 @@
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExpDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IncDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -918,9 +934,10 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker IncomeDateFilter;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label EmpIdLbl;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker ExpDateFilter;
         private System.Windows.Forms.Label label20;
         private Guna.UI2.WinForms.Guna2DataGridView ExpDGV;
         private Guna.UI2.WinForms.Guna2DataGridView IncDGV;
+        private System.Windows.Forms.PictureBox pictureBox9;
     }
 }
