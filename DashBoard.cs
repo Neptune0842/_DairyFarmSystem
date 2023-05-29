@@ -68,5 +68,10 @@ namespace _DairyFarmSystem
         {
            
         }
+
+        private void guna2GradientPanel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
