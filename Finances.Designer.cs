@@ -67,7 +67,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.ExpDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.PurpCb = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.AmountTb = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label9 = new System.Windows.Forms.Label();
@@ -404,7 +404,7 @@
             this.panel9.Controls.Add(this.button5);
             this.panel9.Controls.Add(this.label10);
             this.panel9.Controls.Add(this.ExpDate);
-            this.panel9.Controls.Add(this.comboBox1);
+            this.panel9.Controls.Add(this.PurpCb);
             this.panel9.Controls.Add(this.label8);
             this.panel9.Controls.Add(this.AmountTb);
             this.panel9.Controls.Add(this.label9);
@@ -505,20 +505,20 @@
             this.ExpDate.TabIndex = 110;
             this.ExpDate.Value = new System.DateTime(2023, 2, 27, 17, 10, 20, 563);
             // 
-            // comboBox1
+            // PurpCb
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Cambria", 21.75F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.PurpCb.Font = new System.Drawing.Font("Cambria", 21.75F);
+            this.PurpCb.FormattingEnabled = true;
+            this.PurpCb.Items.AddRange(new object[] {
             "Maintenence",
             "Food",
             "Salary",
             "Tax",
             "Other"});
-            this.comboBox1.Location = new System.Drawing.Point(21, 132);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(217, 42);
-            this.comboBox1.TabIndex = 109;
+            this.PurpCb.Location = new System.Drawing.Point(21, 132);
+            this.PurpCb.Name = "PurpCb";
+            this.PurpCb.Size = new System.Drawing.Size(217, 42);
+            this.PurpCb.TabIndex = 109;
             // 
             // label8
             // 
@@ -849,7 +849,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox PurpCb;
         private System.Windows.Forms.Label label8;
         private Bunifu.Framework.UI.BunifuMaterialTextbox AmountTb;
         private System.Windows.Forms.Label label9;
