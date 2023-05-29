@@ -20,6 +20,7 @@ namespace _DairyFarmSystem
             populateInc();
             clearExp();
             clearInc();
+            FillEmpId();
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -116,12 +117,12 @@ namespace _DairyFarmSystem
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
             sda.Fill(ds);
-            IncDGV.DataSource = ds.Tables[0];
+            ExpDGV.DataSource = ds.Tables[0];
             Con.Close();
         }
         private void button5_Click(object sender, EventArgs e)
         {
-            if (PurpCb.SelectedIndex == -1 || AmountTb.Text == "")
+            if (PurpCb.SelectedIndex == -1 || AmountTb.Text == "" || EmpIdCb.SelectedIndex == -1)
             {
                 MessageBox.Show("Missing Data");
             }
@@ -130,7 +131,7 @@ namespace _DairyFarmSystem
                 try
                 {
                     Con.Open();
-                    string Query = "insert into ExpenditureTbl values('" + ExpDate.Value.Date + "','" + PurpCb.SelectedItem.ToString() + "'," + AmountTb.Text + "," + EmpIdLbl.Text + ")";
+                    string Query = "insert into ExpenditureTbl values('" + ExpDate.Value.Date + "','" + PurpCb.SelectedItem.ToString() + "'," + AmountTb.Text + "," + EmpIdCb.SelectedValue.ToString() + ")";
                     SqlCommand cmd = new SqlCommand(Query, Con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Expenditure Saved");
@@ -150,9 +151,22 @@ namespace _DairyFarmSystem
             IncPurCb.SelectedIndex = -1;
             IncAmount.Text = "";
         }
+        private void FillEmpId()
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("select EmpId from EmployeeTbl", Con);
+            SqlDataReader Rdr;
+            Rdr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("EmpId", typeof(int));
+            dt.Load(Rdr);
+            EmpIdCb.ValueMember = "EmpId";
+            EmpIdCb.DataSource = dt;
+            Con.Close();
+        }
         private void button1_Click(object sender, EventArgs e)
         {
-            if (IncPurCb.SelectedIndex == -1 || IncAmount.Text == "")
+            if (IncPurCb.SelectedIndex == -1 || IncAmount.Text == "" || EmpIdCb.SelectedIndex == -1)
             {
                 MessageBox.Show("Missing Data");
             }
@@ -161,7 +175,7 @@ namespace _DairyFarmSystem
                 try
                 {
                     Con.Open();
-                    string Query = "insert into IncomeTbl values('" + IncDate.Value.Date + "','" + IncPurCb.SelectedItem.ToString() + "'," + IncAmount.Text + "," + EmpIdLbl.Text + ")";
+                    string Query = "insert into IncomeTbl values('" + IncDate.Value.Date + "','" + IncPurCb.SelectedItem.ToString() + "'," + IncAmount.Text + "," + EmpIdCb.SelectedValue.ToString() + ")";
                     SqlCommand cmd = new SqlCommand(Query, Con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Income Saved");
@@ -188,7 +202,12 @@ namespace _DairyFarmSystem
 
         private void guna2DateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
+            FilterExp();
+        }
 
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            Exppopulate();
         }
     }
 }
