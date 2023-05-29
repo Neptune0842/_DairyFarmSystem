@@ -226,5 +226,10 @@ namespace _DairyFarmSystem
                 }
             }
         }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -209,5 +209,10 @@ namespace _DairyFarmSystem
         {
             Exppopulate();
         }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

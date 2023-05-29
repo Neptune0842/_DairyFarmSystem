@@ -80,5 +80,10 @@ namespace _DairyFarmSystem
             UNameTb.Text = "";
             PasswordTb.Text = "";
         }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

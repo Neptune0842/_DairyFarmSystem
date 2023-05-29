@@ -57,35 +57,36 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.IncLbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label4 = new System.Windows.Forms.Label();
             this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.BalanceLbl = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.ExpLbl = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.EmpNumLbl = new System.Windows.Forms.Label();
             this.Label102 = new System.Windows.Forms.Label();
             this.guna2GradientPanel6 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.MilkStockLbl = new System.Windows.Forms.Label();
             this.Lablel101 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.guna2GradientPanel7 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.CowsNumLbl = new System.Windows.Forms.Label();
             this.label100 = new System.Windows.Forms.Label();
             this.guna2GradientPanel8 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.HighAmt = new System.Windows.Forms.Label();
             this.HighDate = new System.Windows.Forms.Label();
+            this.HighAmt = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.guna2GradientPanel9 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label22 = new System.Windows.Forms.Label();
             this.HighExp = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.IncLbl = new System.Windows.Forms.Label();
-            this.ExpLbl = new System.Windows.Forms.Label();
-            this.BalanceLbl = new System.Windows.Forms.Label();
-            this.CowsNumLbl = new System.Windows.Forms.Label();
-            this.MilkStockLbl = new System.Windows.Forms.Label();
-            this.EmpNumLbl = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -105,19 +106,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2GradientPanel2.SuspendLayout();
             this.panel9.SuspendLayout();
-            this.guna2GradientPanel3.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
+            this.guna2GradientPanel3.SuspendLayout();
             this.panel10.SuspendLayout();
             this.guna2GradientPanel5.SuspendLayout();
             this.guna2GradientPanel6.SuspendLayout();
             this.guna2GradientPanel7.SuspendLayout();
             this.guna2GradientPanel8.SuspendLayout();
             this.guna2GradientPanel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2GradientPanel1.Controls.Add(this.pictureBox9);
             this.guna2GradientPanel1.Controls.Add(this.label1);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
@@ -418,6 +421,18 @@
             this.guna2GradientPanel2.Size = new System.Drawing.Size(160, 120);
             this.guna2GradientPanel2.TabIndex = 103;
             // 
+            // IncLbl
+            // 
+            this.IncLbl.AutoSize = true;
+            this.IncLbl.BackColor = System.Drawing.Color.Transparent;
+            this.IncLbl.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IncLbl.ForeColor = System.Drawing.Color.White;
+            this.IncLbl.Location = new System.Drawing.Point(3, 57);
+            this.IncLbl.Name = "IncLbl";
+            this.IncLbl.Size = new System.Drawing.Size(58, 32);
+            this.IncLbl.TabIndex = 105;
+            this.IncLbl.Text = "Egp";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -441,17 +456,41 @@
             this.panel9.Size = new System.Drawing.Size(520, 250);
             this.panel9.TabIndex = 104;
             // 
-            // label3
+            // guna2GradientPanel4
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label3.Location = new System.Drawing.Point(238, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 32);
-            this.label3.TabIndex = 104;
-            this.label3.Text = "Finance";
+            this.guna2GradientPanel4.BorderRadius = 15;
+            this.guna2GradientPanel4.Controls.Add(this.BalanceLbl);
+            this.guna2GradientPanel4.Controls.Add(this.label8);
+            this.guna2GradientPanel4.FillColor = System.Drawing.Color.DeepPink;
+            this.guna2GradientPanel4.FillColor2 = System.Drawing.Color.MediumOrchid;
+            this.guna2GradientPanel4.Location = new System.Drawing.Point(348, 60);
+            this.guna2GradientPanel4.Name = "guna2GradientPanel4";
+            this.guna2GradientPanel4.Size = new System.Drawing.Size(160, 120);
+            this.guna2GradientPanel4.TabIndex = 106;
+            // 
+            // BalanceLbl
+            // 
+            this.BalanceLbl.AutoSize = true;
+            this.BalanceLbl.BackColor = System.Drawing.Color.Transparent;
+            this.BalanceLbl.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BalanceLbl.ForeColor = System.Drawing.Color.White;
+            this.BalanceLbl.Location = new System.Drawing.Point(6, 59);
+            this.BalanceLbl.Name = "BalanceLbl";
+            this.BalanceLbl.Size = new System.Drawing.Size(58, 32);
+            this.BalanceLbl.TabIndex = 105;
+            this.BalanceLbl.Text = "Egp";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(31, 12);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(104, 32);
+            this.label8.TabIndex = 103;
+            this.label8.Text = "Balance";
             // 
             // guna2GradientPanel3
             // 
@@ -465,6 +504,18 @@
             this.guna2GradientPanel3.Size = new System.Drawing.Size(160, 120);
             this.guna2GradientPanel3.TabIndex = 105;
             // 
+            // ExpLbl
+            // 
+            this.ExpLbl.AutoSize = true;
+            this.ExpLbl.BackColor = System.Drawing.Color.Transparent;
+            this.ExpLbl.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExpLbl.ForeColor = System.Drawing.Color.White;
+            this.ExpLbl.Location = new System.Drawing.Point(3, 59);
+            this.ExpLbl.Name = "ExpLbl";
+            this.ExpLbl.Size = new System.Drawing.Size(58, 32);
+            this.ExpLbl.TabIndex = 105;
+            this.ExpLbl.Text = "Egp";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -477,29 +528,17 @@
             this.label4.TabIndex = 103;
             this.label4.Text = "Expenditure";
             // 
-            // guna2GradientPanel4
+            // label3
             // 
-            this.guna2GradientPanel4.BorderRadius = 15;
-            this.guna2GradientPanel4.Controls.Add(this.BalanceLbl);
-            this.guna2GradientPanel4.Controls.Add(this.label8);
-            this.guna2GradientPanel4.FillColor = System.Drawing.Color.DeepPink;
-            this.guna2GradientPanel4.FillColor2 = System.Drawing.Color.MediumOrchid;
-            this.guna2GradientPanel4.Location = new System.Drawing.Point(348, 60);
-            this.guna2GradientPanel4.Name = "guna2GradientPanel4";
-            this.guna2GradientPanel4.Size = new System.Drawing.Size(160, 120);
-            this.guna2GradientPanel4.TabIndex = 106;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(31, 12);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(104, 32);
-            this.label8.TabIndex = 103;
-            this.label8.Text = "Balance";
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.ForestGreen;
+            this.label3.Location = new System.Drawing.Point(238, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(104, 32);
+            this.label3.TabIndex = 104;
+            this.label3.Text = "Finance";
             // 
             // panel10
             // 
@@ -524,6 +563,18 @@
             this.guna2GradientPanel5.Size = new System.Drawing.Size(160, 120);
             this.guna2GradientPanel5.TabIndex = 106;
             // 
+            // EmpNumLbl
+            // 
+            this.EmpNumLbl.AutoSize = true;
+            this.EmpNumLbl.BackColor = System.Drawing.Color.Transparent;
+            this.EmpNumLbl.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpNumLbl.ForeColor = System.Drawing.Color.White;
+            this.EmpNumLbl.Location = new System.Drawing.Point(14, 64);
+            this.EmpNumLbl.Name = "EmpNumLbl";
+            this.EmpNumLbl.Size = new System.Drawing.Size(133, 32);
+            this.EmpNumLbl.TabIndex = 105;
+            this.EmpNumLbl.Text = "EmpName";
+            // 
             // Label102
             // 
             this.Label102.AutoSize = true;
@@ -547,6 +598,18 @@
             this.guna2GradientPanel6.Name = "guna2GradientPanel6";
             this.guna2GradientPanel6.Size = new System.Drawing.Size(160, 120);
             this.guna2GradientPanel6.TabIndex = 105;
+            // 
+            // MilkStockLbl
+            // 
+            this.MilkStockLbl.AutoSize = true;
+            this.MilkStockLbl.BackColor = System.Drawing.Color.Transparent;
+            this.MilkStockLbl.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MilkStockLbl.ForeColor = System.Drawing.Color.White;
+            this.MilkStockLbl.Location = new System.Drawing.Point(52, 57);
+            this.MilkStockLbl.Name = "MilkStockLbl";
+            this.MilkStockLbl.Size = new System.Drawing.Size(69, 32);
+            this.MilkStockLbl.TabIndex = 105;
+            this.MilkStockLbl.Text = "Num";
             // 
             // Lablel101
             // 
@@ -585,6 +648,18 @@
             this.guna2GradientPanel7.TabIndex = 103;
             this.guna2GradientPanel7.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel7_Paint);
             // 
+            // CowsNumLbl
+            // 
+            this.CowsNumLbl.AutoSize = true;
+            this.CowsNumLbl.BackColor = System.Drawing.Color.Transparent;
+            this.CowsNumLbl.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CowsNumLbl.ForeColor = System.Drawing.Color.White;
+            this.CowsNumLbl.Location = new System.Drawing.Point(50, 57);
+            this.CowsNumLbl.Name = "CowsNumLbl";
+            this.CowsNumLbl.Size = new System.Drawing.Size(69, 32);
+            this.CowsNumLbl.TabIndex = 105;
+            this.CowsNumLbl.Text = "Num";
+            // 
             // label100
             // 
             this.label100.AutoSize = true;
@@ -610,17 +685,17 @@
             this.guna2GradientPanel8.Size = new System.Drawing.Size(339, 176);
             this.guna2GradientPanel8.TabIndex = 107;
             // 
-            // label13
+            // HighDate
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(81, 11);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(167, 32);
-            this.label13.TabIndex = 103;
-            this.label13.Text = "Highest Scale";
+            this.HighDate.AutoSize = true;
+            this.HighDate.BackColor = System.Drawing.Color.Transparent;
+            this.HighDate.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HighDate.ForeColor = System.Drawing.Color.White;
+            this.HighDate.Location = new System.Drawing.Point(62, 128);
+            this.HighDate.Name = "HighDate";
+            this.HighDate.Size = new System.Drawing.Size(119, 32);
+            this.HighDate.TabIndex = 105;
+            this.HighDate.Text = "Sale Date";
             // 
             // HighAmt
             // 
@@ -634,17 +709,17 @@
             this.HighAmt.TabIndex = 104;
             this.HighAmt.Text = "Egp";
             // 
-            // HighDate
+            // label13
             // 
-            this.HighDate.AutoSize = true;
-            this.HighDate.BackColor = System.Drawing.Color.Transparent;
-            this.HighDate.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HighDate.ForeColor = System.Drawing.Color.White;
-            this.HighDate.Location = new System.Drawing.Point(62, 128);
-            this.HighDate.Name = "HighDate";
-            this.HighDate.Size = new System.Drawing.Size(119, 32);
-            this.HighDate.TabIndex = 105;
-            this.HighDate.Text = "Sale Date";
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(81, 11);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(167, 32);
+            this.label13.TabIndex = 103;
+            this.label13.Text = "Highest Scale";
             // 
             // guna2GradientPanel9
             // 
@@ -695,77 +770,16 @@
             this.label24.TabIndex = 103;
             this.label24.Text = "Highest Expenditure";
             // 
-            // IncLbl
+            // pictureBox9
             // 
-            this.IncLbl.AutoSize = true;
-            this.IncLbl.BackColor = System.Drawing.Color.Transparent;
-            this.IncLbl.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IncLbl.ForeColor = System.Drawing.Color.White;
-            this.IncLbl.Location = new System.Drawing.Point(3, 57);
-            this.IncLbl.Name = "IncLbl";
-            this.IncLbl.Size = new System.Drawing.Size(58, 32);
-            this.IncLbl.TabIndex = 105;
-            this.IncLbl.Text = "Egp";
-            // 
-            // ExpLbl
-            // 
-            this.ExpLbl.AutoSize = true;
-            this.ExpLbl.BackColor = System.Drawing.Color.Transparent;
-            this.ExpLbl.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExpLbl.ForeColor = System.Drawing.Color.White;
-            this.ExpLbl.Location = new System.Drawing.Point(3, 59);
-            this.ExpLbl.Name = "ExpLbl";
-            this.ExpLbl.Size = new System.Drawing.Size(58, 32);
-            this.ExpLbl.TabIndex = 105;
-            this.ExpLbl.Text = "Egp";
-            // 
-            // BalanceLbl
-            // 
-            this.BalanceLbl.AutoSize = true;
-            this.BalanceLbl.BackColor = System.Drawing.Color.Transparent;
-            this.BalanceLbl.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BalanceLbl.ForeColor = System.Drawing.Color.White;
-            this.BalanceLbl.Location = new System.Drawing.Point(6, 59);
-            this.BalanceLbl.Name = "BalanceLbl";
-            this.BalanceLbl.Size = new System.Drawing.Size(58, 32);
-            this.BalanceLbl.TabIndex = 105;
-            this.BalanceLbl.Text = "Egp";
-            // 
-            // CowsNumLbl
-            // 
-            this.CowsNumLbl.AutoSize = true;
-            this.CowsNumLbl.BackColor = System.Drawing.Color.Transparent;
-            this.CowsNumLbl.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CowsNumLbl.ForeColor = System.Drawing.Color.White;
-            this.CowsNumLbl.Location = new System.Drawing.Point(50, 57);
-            this.CowsNumLbl.Name = "CowsNumLbl";
-            this.CowsNumLbl.Size = new System.Drawing.Size(69, 32);
-            this.CowsNumLbl.TabIndex = 105;
-            this.CowsNumLbl.Text = "Num";
-            // 
-            // MilkStockLbl
-            // 
-            this.MilkStockLbl.AutoSize = true;
-            this.MilkStockLbl.BackColor = System.Drawing.Color.Transparent;
-            this.MilkStockLbl.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MilkStockLbl.ForeColor = System.Drawing.Color.White;
-            this.MilkStockLbl.Location = new System.Drawing.Point(52, 57);
-            this.MilkStockLbl.Name = "MilkStockLbl";
-            this.MilkStockLbl.Size = new System.Drawing.Size(69, 32);
-            this.MilkStockLbl.TabIndex = 105;
-            this.MilkStockLbl.Text = "Num";
-            // 
-            // EmpNumLbl
-            // 
-            this.EmpNumLbl.AutoSize = true;
-            this.EmpNumLbl.BackColor = System.Drawing.Color.Transparent;
-            this.EmpNumLbl.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmpNumLbl.ForeColor = System.Drawing.Color.White;
-            this.EmpNumLbl.Location = new System.Drawing.Point(14, 64);
-            this.EmpNumLbl.Name = "EmpNumLbl";
-            this.EmpNumLbl.Size = new System.Drawing.Size(133, 32);
-            this.EmpNumLbl.TabIndex = 105;
-            this.EmpNumLbl.Text = "EmpName";
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(1453, 9);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(35, 32);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 15;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // DashBoard
             // 
@@ -814,10 +828,10 @@
             this.guna2GradientPanel2.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            this.guna2GradientPanel3.ResumeLayout(false);
-            this.guna2GradientPanel3.PerformLayout();
             this.guna2GradientPanel4.ResumeLayout(false);
             this.guna2GradientPanel4.PerformLayout();
+            this.guna2GradientPanel3.ResumeLayout(false);
+            this.guna2GradientPanel3.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.guna2GradientPanel5.ResumeLayout(false);
@@ -830,6 +844,7 @@
             this.guna2GradientPanel8.PerformLayout();
             this.guna2GradientPanel9.ResumeLayout(false);
             this.guna2GradientPanel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -893,5 +908,6 @@
         private System.Windows.Forms.Label EmpNumLbl;
         private System.Windows.Forms.Label MilkStockLbl;
         private System.Windows.Forms.Label CowsNumLbl;
+        private System.Windows.Forms.PictureBox pictureBox9;
     }
 }

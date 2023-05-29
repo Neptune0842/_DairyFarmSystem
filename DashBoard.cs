@@ -138,5 +138,10 @@ namespace _DairyFarmSystem
             HighExp.Text = "Rs " + dt1.Rows[0][0].ToString();
             Con.Close();
         }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
