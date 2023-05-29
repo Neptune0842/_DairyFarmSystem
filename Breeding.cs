@@ -148,5 +148,86 @@ namespace _DairyFarmSystem
                
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
+
+        private void BreedDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void BreedDGV_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            CowIdCb.SelectedValue = BreedDGV.SelectedRows[0].Cells[1].Value.ToString();
+            CowNameTb.Text = BreedDGV.SelectedRows[0].Cells[2].Value.ToString();
+            HeatDate.Text = BreedDGV.SelectedRows[0].Cells[3].Value.ToString();
+            BreedDate.Text = BreedDGV.SelectedRows[0].Cells[4].Value.ToString();
+            PregDate.Text = BreedDGV.SelectedRows[0].Cells[5].Value.ToString();
+            ExpDate.Text = BreedDGV.SelectedRows[0].Cells[6].Value.ToString();
+            DateCalved.Text = BreedDGV.SelectedRows[0].Cells[7].Value.ToString();
+            RemarksTb.Text = BreedDGV.SelectedRows[0].Cells[7].Value.ToString();
+            if (CowNameTb.Text == "")
+            {
+                key = 0;
+
+            }
+            else
+            {
+                key = Convert.ToInt32(BreedDGV.SelectedRows[0].Cells[0].Value.ToString());
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (key == 0)
+            {
+                MessageBox.Show("Select Breed");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    string Query = "delete from BreedTbl where BrId= " + key + ";";
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Breed Deleted");
+                    Con.Close();
+                    populate();
+                    Clear();
+                }
+                catch (Exception ex)
+                {+21``  1234
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (CowIdCb.SelectedIndex == -1 || CowNameTb.Text == "" || CowAgeTb.Text == "" || RemarksTb.Text == "")
+            {
+                MessageBox.Show("Select Breed");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    string Query = "update BreedTbl set HealthDate='" + HeatDate.Value.Date + "',BreedDate= " + BreedDate.Value.Date + ",CowId=" + CowIdCb.SelectedValue.ToString() + ",CowName=" + CowNameTb.Text + ",PregDate=" + PregDate.Value.Date + ",ExpDateCalve='" + ExpDate.Value.Date + ",DateCalved='" + DateCalved.Value.Date + ",CowAge='" + CowAgeTb.Text + ",Remarks='" + RemarksTb.Text + "' where BrId=" + key + " ;";
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Product Updated");
+                    Con.Close();
+                    populate();
+                    Clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
     }
 }
