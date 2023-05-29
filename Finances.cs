@@ -17,6 +17,9 @@ namespace _DairyFarmSystem
         {
             InitializeComponent();
             Exppopulate();
+            populateInc();
+            clearExp();
+            clearInc();
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -86,7 +89,7 @@ namespace _DairyFarmSystem
         private void populateInc()
         {
             Con.Open();
-            string Query = "select * from ExpenditureTbl";
+            string Query = "select * from IncomeTbl";
             SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
@@ -110,7 +113,7 @@ namespace _DairyFarmSystem
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Expenditure Saved");
                     Con.Close();
-                    //Exppopulate();
+                    Exppopulate();
                     clearExp();
                 }
                 catch (Exception ex)
@@ -136,10 +139,10 @@ namespace _DairyFarmSystem
                 try
                 {
                     Con.Open();
-                    string Query = "insert into ExpenditureTbl values('" + ExpDate.Value.Date + "','" + PurpCb.SelectedItem.ToString() + "'," + AmountTb.Text + "," + EmpIdLbl.Text + ")";
+                    string Query = "insert into IncomeTbl values('" + IncDate.Value.Date + "','" + IncPurCb.SelectedItem.ToString() + "'," + IncAmount.Text + "," + EmpIdLbl.Text + ")";
                     SqlCommand cmd = new SqlCommand(Query, Con);
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Expenditure Saved");
+                    MessageBox.Show("Income Saved");
                     Con.Close();
                     populateInc();
                     clearInc();
