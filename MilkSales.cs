@@ -79,5 +79,11 @@ namespace _DairyFarmSystem
         {
 
         }
+
+        private void QuantityTb_Leave(object sender, EventArgs e)
+        {
+            int total = Convert.ToInt32(PriceTb.Text) * Convert.ToInt32(QuantityTb.Text);
+            TotalTb.Text = "" + total;
+        }
     }
 }
