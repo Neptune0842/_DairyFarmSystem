@@ -630,9 +630,9 @@
             this.label20.ForeColor = System.Drawing.Color.White;
             this.label20.Location = new System.Drawing.Point(16, 71);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(43, 32);
+            this.label20.Size = new System.Drawing.Size(58, 32);
             this.label20.TabIndex = 104;
-            this.label20.Text = "Rs";
+            this.label20.Text = "Egp";
             // 
             // label21
             // 
@@ -679,9 +679,9 @@
             this.label23.ForeColor = System.Drawing.Color.White;
             this.label23.Location = new System.Drawing.Point(16, 71);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(43, 32);
+            this.label23.Size = new System.Drawing.Size(58, 32);
             this.label23.TabIndex = 104;
-            this.label23.Text = "Rs";
+            this.label23.Text = "Egp";
             // 
             // label24
             // 
@@ -703,9 +703,9 @@
             this.IncLbl.ForeColor = System.Drawing.Color.White;
             this.IncLbl.Location = new System.Drawing.Point(3, 57);
             this.IncLbl.Name = "IncLbl";
-            this.IncLbl.Size = new System.Drawing.Size(43, 32);
+            this.IncLbl.Size = new System.Drawing.Size(58, 32);
             this.IncLbl.TabIndex = 105;
-            this.IncLbl.Text = "Rs";
+            this.IncLbl.Text = "Egp";
             // 
             // ExpLbl
             // 
@@ -715,9 +715,9 @@
             this.ExpLbl.ForeColor = System.Drawing.Color.White;
             this.ExpLbl.Location = new System.Drawing.Point(3, 59);
             this.ExpLbl.Name = "ExpLbl";
-            this.ExpLbl.Size = new System.Drawing.Size(43, 32);
+            this.ExpLbl.Size = new System.Drawing.Size(58, 32);
             this.ExpLbl.TabIndex = 105;
-            this.ExpLbl.Text = "Rs";
+            this.ExpLbl.Text = "Egp";
             // 
             // BalanceLbl
             // 
@@ -727,9 +727,9 @@
             this.BalanceLbl.ForeColor = System.Drawing.Color.White;
             this.BalanceLbl.Location = new System.Drawing.Point(6, 59);
             this.BalanceLbl.Name = "BalanceLbl";
-            this.BalanceLbl.Size = new System.Drawing.Size(43, 32);
+            this.BalanceLbl.Size = new System.Drawing.Size(58, 32);
             this.BalanceLbl.TabIndex = 105;
-            this.BalanceLbl.Text = "Rs";
+            this.BalanceLbl.Text = "Egp";
             // 
             // CowsNumLbl
             // 

@@ -97,12 +97,12 @@ namespace _DairyFarmSystem
             SqlDataAdapter sda1 = new SqlDataAdapter("select sum(ExpAmount) from ExpenditureTbl", Con);
             DataTable dt1 = new DataTable();
             sda.Fill(dt1);
-            IncLbl.Text = "Rs" + dt.Rows[0][0].ToString();
+            IncLbl.Text = "Egp" + dt.Rows[0][0].ToString();
 
             exp = Convert.ToInt32(dt.Rows[0][0].ToString());
             bal = inc - exp;
-            ExpLbl.Text = "Rs" + dt1.Rows[0][0].ToString();
-            BalanceLbl.Text = "Rs" + bal;
+            ExpLbl.Text = "Egp" + dt1.Rows[0][0].ToString();
+            BalanceLbl.Text = "Egp" + bal;
             Con.Close();
 
         }
