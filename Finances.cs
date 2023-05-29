@@ -63,5 +63,10 @@ namespace _DairyFarmSystem
             Ob.Show();
             this.Hide();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
