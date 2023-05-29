@@ -82,6 +82,18 @@ namespace _DairyFarmSystem
             ExpDGV.DataSource = ds.Tables[0];
             Con.Close();
         }
+
+        private void populateInc()
+        {
+            Con.Open();
+            string Query = "select * from ExpenditureTbl";
+            SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            IncDGV.DataSource = ds.Tables[0];
+            Con.Close();
+        }
         private void button5_Click(object sender, EventArgs e)
         {
             if (PurpCb.SelectedIndex == -1 || AmountTb.Text == "")
@@ -100,6 +112,37 @@ namespace _DairyFarmSystem
                     Con.Close();
                     //Exppopulate();
                     clearExp();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void clearInc()
+        {
+            IncPurCb.SelectedIndex = -1;
+            IncAmount.Text = "";
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (IncPurCb.SelectedIndex == -1 || IncAmount.Text == "")
+            {
+                MessageBox.Show("Missing Data");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    string Query = "insert into ExpenditureTbl values('" + ExpDate.Value.Date + "','" + PurpCb.SelectedItem.ToString() + "'," + AmountTb.Text + "," + EmpIdLbl.Text + ")";
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Expenditure Saved");
+                    Con.Close();
+                    populateInc();
+                    clearInc();
                 }
                 catch (Exception ex)
                 {

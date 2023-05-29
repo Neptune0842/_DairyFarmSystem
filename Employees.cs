@@ -58,7 +58,7 @@ namespace _DairyFarmSystem
                 try
                 {
                     Con.Open();
-                    string Query = "insert into EmployeeTbl values('" + EmpNameTb.Text + "','" + DoB.Value.Date + "','" + GenderCb.SelectedValue.ToString() + "','" + PhoneTb.Text + "','" + AddressTb.Text + ")";
+                    string Query = "insert into EmployeeTbl values('" + EmpNameTb.Text + "','" + DoB.Value.Date + "','" + GenderCb.SelectedValue.ToString() + "','" + PhoneTb.Text + "','" + AddressTb.Text + "')";
                     SqlCommand cmd = new SqlCommand(Query, Con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Employee Saved");
