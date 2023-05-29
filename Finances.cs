@@ -97,6 +97,17 @@ namespace _DairyFarmSystem
             IncDGV.DataSource = ds.Tables[0];
             Con.Close();
         }
+        private void FilterIncome()
+        {
+            Con.Open();
+            string Query = "select * from IncomeTbl where IncDate='"+IncomeDateFilter.Value.Date+"'";
+            SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            IncDGV.DataSource = ds.Tables[0];
+            Con.Close();
+        }
         private void button5_Click(object sender, EventArgs e)
         {
             if (PurpCb.SelectedIndex == -1 || AmountTb.Text == "")
@@ -152,6 +163,11 @@ namespace _DairyFarmSystem
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void guna2DateTimePicker3_ValueChanged(object sender, EventArgs e)
+        {
+            FilterIncome();
         }
     }
 }
