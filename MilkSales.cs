@@ -80,6 +80,27 @@ namespace _DairyFarmSystem
         {
 
         }
+        private void SaveTrans()
+        {
+
+
+            try
+            {
+                String Sales = "Sales";
+                Con.Open();
+                string Query = "insert into IncomeTbl values('" + Date.Value.Date + "','" + Sales + "'," + TotalTb.Text + "," + EmpIdCb.SelectedValue.ToString() + ")";
+                SqlCommand cmd = new SqlCommand(Query, Con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Income Saved");
+                Con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
         private void populate()
         {
             Con.Open();
@@ -124,7 +145,7 @@ namespace _DairyFarmSystem
                     MessageBox.Show("Milk Sales Saved");
                     Con.Close();
                     populate();
-                    //SaveTrans();
+                    SaveTrans();
                     clear();
 
                 }
