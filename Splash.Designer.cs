@@ -60,12 +60,12 @@
             // 
             // Progress
             // 
-            this.Progress.BackColor = System.Drawing.Color.White;
+            this.Progress.BackColor = System.Drawing.Color.SlateGray;
             this.Progress.BorderRadius = 5;
             this.Progress.Location = new System.Drawing.Point(0, 438);
             this.Progress.MaximumValue = 100;
             this.Progress.Name = "Progress";
-            this.Progress.ProgressColor = System.Drawing.Color.Teal;
+            this.Progress.ProgressColor = System.Drawing.Color.White;
             this.Progress.Size = new System.Drawing.Size(799, 10);
             this.Progress.TabIndex = 2;
             this.Progress.Value = 0;
