@@ -84,6 +84,7 @@
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.EmpIdLbl = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -768,11 +769,23 @@
             this.label12.TabIndex = 103;
             this.label12.Text = "Income List";
             // 
+            // EmpIdLbl
+            // 
+            this.EmpIdLbl.AutoSize = true;
+            this.EmpIdLbl.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpIdLbl.ForeColor = System.Drawing.Color.DimGray;
+            this.EmpIdLbl.Location = new System.Drawing.Point(1290, 52);
+            this.EmpIdLbl.Name = "EmpIdLbl";
+            this.EmpIdLbl.Size = new System.Drawing.Size(95, 32);
+            this.EmpIdLbl.TabIndex = 115;
+            this.EmpIdLbl.Text = "EmpId";
+            // 
             // Finances
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1500, 900);
+            this.Controls.Add(this.EmpIdLbl);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.guna2GradientPanel1);
@@ -869,5 +882,6 @@
         private System.Windows.Forms.Label label12;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker3;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label EmpIdLbl;
     }
 }
