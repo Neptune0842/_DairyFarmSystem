@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace _DairyFarmSystem
         public MilkSales()
         {
             InitializeComponent();
+            FillEmpId();
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -57,6 +59,25 @@ namespace _DairyFarmSystem
             DashBoard Ob = new DashBoard();
             Ob.Show();
             this.Hide();
+        }
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Administrator\Documents\DairyFarmDb.mdf;Integrated Security=True;Connect Timeout=30");
+
+        private void FillEmpId()
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("select EmpId from EmployeeTbl", Con);
+            SqlDataReader Rdr;
+            Rdr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("EmpId", typeof(int));
+            dt.Load(Rdr);
+            CowIdCb.ValueMember = "EmpId";
+            CowIdCb.DataSource = dt;
+            Con.Close();
+        }
+        private void MilkSales_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
