@@ -71,19 +71,77 @@ namespace _DairyFarmSystem
             DataTable dt = new DataTable();
             dt.Columns.Add("EmpId", typeof(int));
             dt.Load(Rdr);
-            CowIdCb.ValueMember = "EmpId";
-            CowIdCb.DataSource = dt;
+            EmpIdCb.ValueMember = "EmpId";
+            EmpIdCb.DataSource = dt;
             Con.Close();
         }
         private void MilkSales_Load(object sender, EventArgs e)
         {
 
         }
+        private void populate()
+        {
+            Con.Open();
+            string Query = "select * from MilkSalesTbl";
+            SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            SalesDGV.DataSource = ds.Tables[0];
+            Con.Close();
+        }
+        private void clear()
+        {
+            TotalTb.Text = "";
+            QuantityTb.Text = "";
+            PriceTb.Text = "";
+            PhoneTb.Text = "";
+            ClientNameTb.Text = "";
+            EmpIdCb.SelectedIndex = -1;
+        }
 
         private void QuantityTb_Leave(object sender, EventArgs e)
         {
             int total = Convert.ToInt32(PriceTb.Text) * Convert.ToInt32(QuantityTb.Text);
             TotalTb.Text = "" + total;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (EmpIdCb.SelectedIndex == -1 || ClientNameTb.Text == "" || PhoneTb.Text == "" || PriceTb.Text == "" || QuantityTb.Text == "" || TotalTb.Text == "")
+            {
+                MessageBox.Show("Missing Data");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    string Query = "insert into MilkSalesTbl values('" + Date.Value.Date + "','" + PriceTb.Text + "','" + ClientNameTb.Text + "','" + PhoneTb.Text + "'," + EmpIdCb.SelectedValue.ToString() + "," + QuantityTb.Text + ", " + TotalTb.Text + ")";
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Milk Sales Saved");
+                    Con.Close();
+                    populate();
+                    //SaveTrans();
+                    clear();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void SalesDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            clear();
         }
     }
 }
