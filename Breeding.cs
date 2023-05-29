@@ -106,7 +106,7 @@ namespace _DairyFarmSystem
         }
         private void Breeding_Load(object sender, EventArgs e)
         {
-             
+
         }
 
         private void CowIdCb_SelectionChangeCommitted(object sender, EventArgs e)
@@ -145,7 +145,7 @@ namespace _DairyFarmSystem
                 {
                     MessageBox.Show(ex.Message);
                 }
-               
+
             }
         }
 
@@ -199,7 +199,7 @@ namespace _DairyFarmSystem
                     Clear();
                 }
                 catch (Exception ex)
-                {+21``  1234
+                {
                     MessageBox.Show(ex.Message);
                 }
             }
@@ -229,5 +229,6 @@ namespace _DairyFarmSystem
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
     }
 }
